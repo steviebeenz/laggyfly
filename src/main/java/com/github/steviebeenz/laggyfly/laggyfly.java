@@ -24,6 +24,8 @@ import me.godead.lilliputian.Repository;
 
 public class laggyfly extends Thread implements Listener {
 
+    private JavaPlugin Plogen;
+
     public void Setup(JavaPlugin instance) {
         final Lilliputian lilliputian = new Lilliputian(instance);
         lilliputian.getDependencyBuilder()
@@ -44,7 +46,7 @@ public class laggyfly extends Thread implements Listener {
     
 
     @EventHandler   
-    public void isPLayerFlying(PlayerMoveEvent event, JavaPlugin instance) {
+    public void isPLayerFlying(PlayerMoveEvent event) {
         Player player = event.getPlayer();
         // REDUCE LAG BY RUNNING ONLY SOMETIMES
         int rand12 = (Math.random() <= 0.5) ? 1 : 4;
@@ -89,7 +91,7 @@ public class laggyfly extends Thread implements Listener {
     }
             }
             
-        }.runTaskLater(instance,20);
+        }.runTaskLater(Plogen,20);
                         //confLowerOnFly(player);
                     }
                 
