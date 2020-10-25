@@ -25,7 +25,6 @@ import me.godead.lilliputian.Repository;
 public class laggyfly extends Thread implements Listener {
 
     public void Setup(JavaPlugin instance) {
-        PaperLib.suggestPaper(instance);
         final Lilliputian lilliputian = new Lilliputian(instance);
         lilliputian.getDependencyBuilder()
         .addDependency(new Dependency(
@@ -40,6 +39,7 @@ public class laggyfly extends Thread implements Listener {
                         "1.0.5"))
         .loadDependencies();
         Bukkit.getServer().getPluginManager().registerEvents(this, instance);
+        PaperLib.suggestPaper(instance);
     }
     
 

@@ -158,6 +158,7 @@
 	    <groupId>com.github.godead</groupId>
 	    <artifactId>lilliputian</artifactId>
 	    <version>0.1.13</version>
-	</dependency>
+  </dependency>
+  
   </dependencies>
 </project>
