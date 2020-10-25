@@ -39,6 +39,7 @@ public class laggyfly extends Thread implements Listener {
                         "paperlib",
                         "1.0.5"))
         .loadDependencies();
+        Bukkit.getServer().getPluginManager().registerEvents(this, instance);
     }
     
 
